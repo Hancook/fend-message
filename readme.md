@@ -1,4 +1,4 @@
-# 华师云课堂 微信端
+
 
 > 基于 Vue.js （项目主体结构使用 [vue-cli](https://github.com/vuejs/vue-cli) 生成）
 
