@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content='width=device-width,initial-scale=1,user-scalable=0'>
+    <title>签到</title>
+    <link rel='stylesheet' href='style/weui.css' />
+    <link rel='stylesheet' href='style/style.css'/>
+    <script src="js/zepto.min.js"></script>
+</head>
+<body class="bodyBg">
+<div class="bigPanel bigPanel-bg">
+
+    <div class="panel-head"><h4>课堂签到</h4></div>
+    <div class="panel-body">
+        <dl class="dl-horizontal">
+            <dt>主题：</dt><dd>2017年度师生交流会交流会交流会交流会交流会交流会交流会交流</dd>
+            <dt>时间：</dt><dd>2017/08/29  上午9点半</dd>
+        </dl>
+    </div>
+    <div class="panel-footer">
+        <a href="javascript:;" class="weui-btn weui-btn_primary" id="showToast"><span class="iconfont icon-chenggong"></span> 签 到</a>
+        <p class="time text-center">签到时间：2018-10-10 8:30</p>
+    </div>
+</div>
+<!--<div class="weui-toptips weui-toptips_warn js_tooltips">错误提示</div>-->
+<div class="weui-msg_img hide" id="msg4" style="opacity: 0; display: none;">
+    <div class="weui-msg_com">
+        <div onclick="$('#msg4').fadeOut();" class="weui-msg_close"><i class="weui-icon weui-icon-clear"></i></div>
+        <div class="weui-msg_src">
+
+        </div><div class="weui-msg_srt">
+
+        </div>
+        <div class="weui-msg-box">
+            <div class="text-center">
+                <span class="iconfont icon-chenggong1"></span>
+            </div>
+            <div class="weui-msg_title">签到成功</div>
+        </div>
+    </div>
+</div>
+<script>
+$(function(){
+    $(document).on("click", "#showToast", function() {
+        $('#msg4').fadeIn();
+    });
+})
+</script>
+</body>
+</html>

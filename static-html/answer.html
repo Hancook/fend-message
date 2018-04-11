@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content='width=device-width,initial-scale=1,user-scalable=0'>
+  <title>答题</title>
+  <link rel='stylesheet' href='style/weui.css' />
+  <link rel='stylesheet' href='style/style.css'/>
+  <script src="js/zepto.min.js"></script>
+</head>
+<body class=""></body>
+<script>
+  $(function(){
+    var max = $('#count_max').text();
+    $('#textarea').on('input', function(){
+      var text = $(this).val();
+      var len = text.length;
+      $('#count').text(len);
+      if(len > max){
+        $(this).closest('.weui-cell').addClass('weui-cell_warn');
+      }
+      else{
+        $(this).closest('.weui-cell').removeClass('weui-cell_warn');
+      }
+    });
+  })
+</script>
+</html>

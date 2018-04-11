@@ -1,0 +1,194 @@
+@charset "UTF-8";
+.tab_container {
+  @extend %relative;
+  .sp_page_homework {
+    min-height: calc(100vh - 3rem);
+    position: relative;
+    //background-color: #f5f5f5;
+    .sp_tab {
+      &.sp_homework_list {
+        @extend %relative;
+
+      }
+      &.scorell_fixed {
+        position: fixed;
+      }
+    }
+
+  }
+  .sp_paging {
+    //background-color: #f5f5f5;
+  }
+}
+
+//未提交列表的样式
+.white_bg {
+  background-color: #fff;
+}
+
+.sp_homework_lists {
+  @extend %relative;
+  .sp_rejected_con {
+    @extend %absolute;
+    right: 0;
+    top: -7%;
+    width: 9.583rem;
+    @include height(true, 2.183rem, 2.083rem);
+    //@extend %ovh;
+    //box-sizing: border-box;
+    span {
+      @extend %float;
+      width: 5.833rem;
+      @extend %textAlign;
+      border: 1px solid #cecece;
+      border-right: none;
+    }
+    .sp_watch {
+      @extend %float;
+      width: 3.75rem;
+      @extend %textAlign;
+      background-color: $base_color;
+      border: 1px solid $base_color;
+      color: #fff;
+
+    }
+  }
+  .sp_homework_msg {
+    margin-bottom: 0;
+    color: $lightGray_color;
+  }
+  .sp_homewor_name {
+    //@include height(true, 1.25rem, 1.25rem);
+    line-height: 2rem;
+    margin: 0.6rem 0 1rem;
+    //@extend %ellipsis;
+    text-overflow: ellipsis;
+    display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+    -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+    -webkit-line-clamp: 2; /** 显示的行数 **/
+    overflow: hidden; /** 隐藏超出的内容 **/
+    word-break: break-all;
+
+    @extend %fontSize30;
+    color: $text_color;
+    //@extend %fwb;
+    &.close_date_name {
+      color: $gray_color;
+    }
+  }
+  .sp_homewor_date {
+    margin-bottom: 0;
+    color: $text_color;
+    &.close_date {
+      color: $lightGray_color;
+    }
+    .no_close_date {
+      color: $lightGray_color;
+      em {
+        margin-left: 0.8rem;
+      }
+    }
+  }
+}
+
+//提交列表的样式
+.sp_homework_submitted_con {
+  padding: 0 1rem 3rem;
+  //background-color: #f5f5f5;
+  .weui-cell {
+    padding: 1.8rem 0 0.9rem;
+  }
+  .weui-cell__bd {
+    @extend %relative;
+    width: 100%;
+  }
+}
+
+.sp_homework_submitted {
+  border-bottom: 1px solid $border_color;
+  @extend %fontSize24;
+  .sp_homewor_msg_list {
+    margin-bottom: 0rem;
+    color: $text_color;
+    ul {
+      padding-left: 0;
+      li {
+        @extend %display;
+
+        .sp_classify {
+          @extend %fontSize18;
+        }
+      }
+      li + li {
+        margin-left: 3.583rem;
+      }
+    }
+
+  }
+}
+
+//弹窗
+.spoc_dialog {
+  width: 85%;
+  max-width: 85%;
+  max-height: 70vh;
+  .course_dialog {
+    padding: 1.5rem 0 0;
+  }
+  .spoc_dialog_title {
+    @extend %textAlign;
+    line-height: 2rem;
+    padding:0 10px;
+    font-size: 1.5rem;
+    margin: 0 auto;
+    color: $base_color;
+  }
+  .spoc_dialog_create {
+    color: $lightGray_color;
+  }
+  .couse_content {
+    @extend %relative;
+    .course_title {
+      position: absolute;
+      left: -0.2rem;
+      top: 0;
+      width: 8rem;
+      height: 1.8rem;
+      background-color: #3dd2ad;
+      color: white;
+      text-align: center;
+      font-size: 1rem;
+      line-height: 1.8rem;
+    }
+    .course_datail {
+      min-height: 17rem;
+      max-height: 36vh;
+      overflow-y: auto;
+      //margin-top:2.8rem;
+      //margin:2.8rem 1.5rem 2rem;
+      //padding: 2.8rem 1.5rem 2rem;
+      text-indent: 2.033rem;
+      text-align: left;
+      margin-bottom: 0;
+    }
+  }
+  .weui-dialog__ft {
+    height: 4rem;
+    @extend %textAlign;
+    display: block;
+    &:after {
+      display: none;
+    }
+    .spoc_dialog_btn {
+      @extend %display;
+      @extend %vam;
+      width: 6.25rem;
+      @include height(true, 2rem, 2rem);
+      @extend %fontSize24;
+      background-color: $base_color;
+      color: #fff;
+
+    }
+  }
+
+}

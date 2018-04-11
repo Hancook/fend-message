@@ -1,0 +1,14 @@
+@import "sassCore/base"; //sass 外库
+@import "sassCore/ext/animate/bounce";
+@import "sassCore/ext/animate/flip";
+
+@import "base/variable";
+@import "base/wx_mixin"; //studyData mixin 文件
+@import "base/base";  //studyData html css 基础文件 style
+
+@import "pages/seminar_list";  //
+@import "pages/page_list";  //
+@import "pages/page_homework";  //
+
+
+

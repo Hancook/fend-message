@@ -1,0 +1,252 @@
+@charset "UTF-8";
+.spoc_nav_header {
+  overflow: hidden;
+  //@include height(true,1.25rem,1.25rem) ;
+  background-color: #3dd2ad;
+  color: #fff;
+  @extend %fontSize24;
+  padding: 1rem;
+  .spoc_seminar_siteName {
+    @extend %fontSize26;
+    @extend %fwb;
+    float: left;
+    width: 72%;
+    @extend %ellipsis;
+  }
+}
+
+.spoc_seminar_select {
+  @extend %display;
+  color: #fff;
+  float: right;
+  @extend %fontSize26;
+  .sel_course_icon {
+    @extend %display;
+    width: 2rem;
+    @include height(true, 2rem, 2rem);
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    @extend %textAlign;
+    background-color: #fff;
+    img {
+      width: 1rem;
+      height: 0.8rem;
+    }
+
+  }
+}
+
+.spoc_seminar_list {
+  padding: 0 1rem 2rem;
+  @extend %fontSize20;
+  .weui-cell {
+    padding: 1.45rem 0 0;
+  }
+  .seminar_user_img {
+    @extend %float;
+    img {
+      @extend %display;
+      width: 3.5rem;
+      height: 3.5rem;
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%;
+      border-radius: 100%;
+      //border: 1px solid $border_color;
+    }
+  }
+  .seminar_theme_msg {
+    @extend %float;
+    @extend %ovh;
+    margin-left: 1rem;
+    width: 80%;
+    //border-bottom: 1px solid $border_color;
+    h3 {
+      //width: 90%;
+      @extend %ellipsis;
+      @extend %fontSize30;
+      line-height: 1.8rem;
+      margin-bottom: 0.2rem;
+    }
+    p {
+      span {
+        @extend %display;
+        color: $lightGray_color;
+        @extend %fontSize24;
+        width: 31%;
+        //margin-right: 2rem;
+        :last-of-type {
+          margin-right: 0;
+        }
+      }
+      em {
+        &.user_job {
+          background-color: $base_color;
+          color: #fff;
+          @extend %display;
+          padding: 0 5px;
+        }
+      }
+    }
+  }
+  .spoc_jump_icon {
+    &:after {
+      width: 0.8rem;
+      height: 0.8rem;
+      margin-top: -10px;
+
+    }
+  }
+}
+
+//评论详情页面
+.seminar_detail_content {
+  @extend %absolute;
+  //top:0;
+  //bottom:0;
+  min-height: 100%;
+  width: 100%;
+  background-color: #f5f5f5;
+  z-index: 6;
+}
+
+.spoc_seminar_back_btn {
+  margin-top: 1.8rem;
+  margin-bottom: 0;
+  padding: 0.4rem 2rem 0.4rem 1rem;
+  background-color: $base_color;
+  @extend %fontSize24;
+  color: #fff;
+}
+
+.seminar_detail {
+  padding: 1.8rem 1rem 0;
+  h3 {
+    @extend %fontSize30;
+    @extend %ellipsis;
+    line-height: 1.25rem;
+    border-bottom: 1px solid $border_color;
+    padding-bottom: 1rem;
+  }
+}
+
+.seminar_reply_lists {
+  .weui-cells {
+    background-color: #f5f5f5;
+  }
+  .weui-cell {
+    margin-bottom: 0.83rem;
+    background-color: #ffffff;
+
+    &:before {
+      border-top: none;
+    }
+  }
+  .seminar_reply_msg {
+    @extend %fontSize24;
+    border-bottom: 1px solid $border_color;
+    .seminar_replay_name {
+      color: $base_color;
+      margin-right: 2rem;
+    }
+    .reminar_replay_index {
+      float: right;
+    }
+  }
+
+  .seminar_replay_content {
+    .replay_title {
+      @extend %fontSize24;
+      color: $text_color;
+      @extend %fwb;
+      line-height: 1rem;
+      margin: 0.5rem 0;
+    }
+    .replay_content {
+      @extend %fontSize24;
+      max-height: 4rem;
+      overflow: hidden;
+      white-space: pre-line;
+    }
+    .replay_to {
+      @extend %fontSize24;
+      @extend %fwb;
+      float: right;
+    }
+
+  }
+}
+
+//回复框设置
+.reply_content_fill {
+  .reply_title {
+    margin-bottom: 0.66rem;
+    label {
+      line-height: 2.5rem;
+      @extend %fontSize24;
+    }
+    input {
+      padding-left: 6px;
+      width: 68%;
+      background-color: #fff;
+      @include height(true, 2rem, 2rem);
+      border-top: 1px solid $border_color;
+      border-bottom: 1px solid $border_color;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px;
+    }
+  }
+  .reply_content {
+    @extend %relative;
+    @extend %ovh;
+    .reply_textArea {
+      @extend %float;
+      width: 80%;
+      padding-left: 4px;
+      padding-bottom: 1rem;
+      background-color: #fff;
+      border-top: 1px solid $border_color;
+      border-bottom: 1px solid $border_color;
+    }
+    button {
+      position: absolute;
+      padding: 0.4rem 0;
+      width: 16%;
+      //padding:0.4rem 1.2rem;
+      @extend %fontSize24;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px;
+      right: 0;
+      color: #fff;
+      margin-bottom: 0;
+    }
+    .reply_confirm {
+      top: 1px;
+      background-color: $base_color;
+      &.weui-btn_disabled {
+        background-color: #cecece;
+        color: hsla(0, 0%, 100%, .6);
+      }
+    }
+    .reply_reset {
+      bottom: 1px;
+      background-color: #cecece;
+    }
+  }
+
+}
+
+.reply_total_num {
+  @extend %fontSize24;
+  @extend %fwb;
+  margin-bottom: 0;
+  line-height: 2.5rem;
+}
+
+.weui_textarea_counter {
+  @extend %absolute;
+  bottom: 0.1rem;
+  right: 21%;
+}

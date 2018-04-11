@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content='width=device-width,initial-scale=1,user-scalable=0'>
+    <title>讨论</title>
+    <link rel='stylesheet' href='style/weui.css' />
+    <link rel='stylesheet' href='style/style.css'/>
+    <script src="js/zepto.min.js"></script>
+</head>
+<body class="bdBg">
+<div class="weui-page_head">
+    <h3>课堂讨论 <small>2018-07-08</small></h3>
+
+</div>
+<div class="weui-panel weui-panel-head">
+    <div class="weui-cells_title">
+        我要提问
+    </div>
+    <div class="weui-cells weui-cells_form">
+        <div class="weui-cell">
+            <div class="weui-cell__bd">
+                <textarea id="textarea" class="weui-textarea" placeholder="请输入文本" rows="3"></textarea>
+
+                <div class="weui_textarea_counter"><span id="count">0</span>/<span id="count_max">20</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="weui-btn-area">
+        <a href="javascript:;" class="weui-btn weui-btn_primary weui-btn_inline weui-btn_mini"><strong>提交</strong></a>
+        <a href="javascript:;" class="weui-btn weui-btn_default weui-btn_inline weui-btn_mini"><strong>取消</strong></a>
+    </div>
+</div>
+
+<div class="weui-panel weui-panel_list">
+    <div class="weui-panel__hd"><h5><span class="">名字</span><small>5分钟前</small></h5></div>
+    <div class="weui-panel__bd">
+        <div>爱实打实的发生地阿斯顿发生基本原理基本原理基本原理基本原理基本原理 阿撒的法撒旦发射点发阿斯顿发阿斯顿发</div>
+    </div>
+</div>
+
+<div class="weui-panel weui-panel_list">
+    <div class="weui-panel__hd"><h5><span class="">名字</span><small>5分钟前</small></h5></div>
+    <div class="weui-panel__bd">
+        <div>爱实打实的发生地阿斯顿发生基本原理基本原理基本原理基本原理基本原理 阿撒的法撒旦发射点发阿斯顿发阿斯顿发</div>
+    </div>
+</div>
+
+<div class="weui-panel weui-panel_list">
+    <div class="weui-panel__hd"><h5><span class="">名字</span><small>5分钟前</small></h5></div>
+    <div class="weui-panel__bd">
+        <div>爱实打实的发生地阿斯顿发生基本原理基本原理基本原理基本原理基本原理 阿撒的法撒旦发射点发阿斯顿发阿斯顿发</div>
+    </div>
+</div>
+</body>
+<script>
+
+    $(function(){
+        var max = $('#count_max').text();
+        $('#textarea').on('input', function(){
+            var text = $(this).val();
+            var len = text.length;
+            $('#count').text(len);
+            if(len > max){
+                $(this).closest('.weui-cell').addClass('weui-cell_warn');
+            }
+            else{
+                $(this).closest('.weui-cell').removeClass('weui-cell_warn');
+            }
+        });
+    })
+
+</script>
+</html>
